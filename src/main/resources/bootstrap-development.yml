@@ -1,0 +1,20 @@
+server.port: 8888
+
+eureka.client:
+  registerWithEureka: false
+  fetchRegistry: false
+
+spring:
+  application.name: config-server
+  cloud.config:
+    server.git:
+      uri: file://${user.home}/intec-config-database
+      default-label: development
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8888/eureka/
+    registryFetchIntervalSeconds: 1
+  instance:
+    leaseRenewalIntervalInSeconds: 1
