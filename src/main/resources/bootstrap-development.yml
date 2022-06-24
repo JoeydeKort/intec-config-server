@@ -5,7 +5,7 @@ eureka.client:
   fetchRegistry: false
 
 spring:
-  application.name: config-server
+  application.name: config
   cloud.config:
     server.git:
       uri: file://${user.home}/intec-config-database
